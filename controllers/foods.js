@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
     try {
       const currentUser = await User.findById(req.session.user._id);
       res.render('foods/index.ejs', {
-        foods: currentUser.foods,
+        foods: currentUser.food,
       });
     } catch (error) {
       console.log(error)

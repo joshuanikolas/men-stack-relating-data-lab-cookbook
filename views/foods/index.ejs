@@ -9,7 +9,7 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Welcome to my Pantry</h1>
     <ul>
-        <% foods.foreach((food) => { %>
+        <% foods.forEach((food) => { %>
             <li>
                 <%= food.name %>
                 <a href="/users/<%= user._id %>/foods/<%= food._id %>/edit">Edit</a>
