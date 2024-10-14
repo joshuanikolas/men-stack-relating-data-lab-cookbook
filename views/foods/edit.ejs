@@ -7,15 +7,15 @@
   </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Update <%= food.name %></h1>
+    <h1>Update <%= pantry.name %></h1>
 
     <form action="/users/<%= user._id %>/foods/<%= food._id %>?_method=PUT"
     method="POST"> 
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" value="<%= food.name %>"/>
+        <input type="text" name="name" id="name" value="<%= pantry.name %>"/>
 
         <label for="isExpired">Expired?:</label>
-        <input type="checkbox" name="isExpired" id="isExpired" <% if (food.isExpired) { %>checked<% } %> >
+        <input type="checkbox" name="isExpired" id="isExpired" <% if (pantry.isExpired) { %>checked<% } %> >
     
       <button type="submit">Update Food Item</button>
     </form>
