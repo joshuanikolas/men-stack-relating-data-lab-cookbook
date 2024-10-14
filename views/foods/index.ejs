@@ -11,12 +11,12 @@
     <ul>
         <% pantry.forEach((foods) => { %>
             <li>
-                <%= food.name %>
-                <a href="/users/<%= user._id %>/foods/<%= food._id %>/edit">Edit</a>
-                <form action="/users/<%= user._id %>/foods/<%= food._id %>?_method=DELETE"
+                <%= pantry.name %>
+                <a href="/users/<%= user._id %>/foods/<%= pantry._id %>/edit">Edit</a>
+                <form action="/users/<%= user._id %>/foods/<%= pantry._id %>?_method=DELETE"
                     method="POST">
                       <button type="submit">Delete This Food item</button></form>
-          <ul>Expired?: <%= food.isExpired %></ul>
+          <ul>Expired?: <%= pantry.isExpired %></ul>
         </li>
       <% }) %> 
     </ul>
